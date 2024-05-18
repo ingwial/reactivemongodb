@@ -1,0 +1,28 @@
+server:
+  port: 9080
+spring:
+  application:
+    name: spring-webflux-guide
+  webflux:
+    base-path: /api
+  data:
+    mongodb:
+      authentication-database: admin
+      uri: mongodb://localhost:27017/test
+      database: test
+
+logging:
+  level:
+    io:
+      reflectoring: ERROR
+    org:
+      springframework:
+        web: ERROR
+        data:
+          mongodb:
+            core:
+              ReactiveMongoTemplate: ERROR
+    reactor:
+      netty:
+        http:
+          client: ERROR
